@@ -33,36 +33,6 @@ public class CommentController {
         this.commentService = commentService;
     }
 
-    @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Map<String, Object>> search(
-            @RequestParam(required = false) String keyword,
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
-        try {
-            List<Post> content;
-            Pageable paging = PageRequest.of(page, size, Sort.by("creationDate").descending());
-            Page<Post> pageCards;
-
-            if (keyword == null || keyword.isBlank()) {
-                pageCards = postService.findAll(paging);
-            } else {
-                pageCards = postService.searchPostsByTitleOrContent(keyword, paging);
-            }
-
-            content = pageCards.getContent();
-            Map<String, Object> map = new HashMap<>();
-            map.put("content", content);
-            map.put("currentPage", pageCards.getNumber());
-            map.put("pageSize", pageCards.getSize());
-            map.put("totalItems", pageCards.getTotalElements());
-            map.put("totalPages", pageCards.getTotalPages());
-            return new ResponseEntity<>(map, HttpStatus.OK);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
     @PostMapping("/save")
     public ResponseEntity<?> createComment(@Validated @RequestBody CommentRequestDTO commentRequest, Authentication authentication) {
 
