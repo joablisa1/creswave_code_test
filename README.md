@@ -33,7 +33,9 @@ password:1234
 
 								NOTES
 							.............
-No Post and comment created but you can create one or two  post and comment for testing.
+1.No Post and comment created but you can create one or two  post and comment for testing.
+2.Generate an access Token for you to authorize  the user to work on the system.
+
 
 
 
