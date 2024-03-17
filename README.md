@@ -33,7 +33,7 @@ password:1234
 1.No Post and comment created, but you can create one or two  post and comment for testing.
 2.Database Tables will be generated automatically.
 2.Generate an access Token for you to authorize  the user to work on the API.on Swagger or postman
-3.Run mvn install the maven command to install the dependency if not installed.
+3.Run mvn install ,to install the dependency if not installed.
 
 
 
