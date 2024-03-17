@@ -29,10 +29,6 @@ public class CommentServiceImpl  implements  CommentService{
     public Comment createComment(Comment comment,String username) {
         Optional<User> user = userRepository.findByUsername(username);
         comment.setAuthor(user.get());
-//        comments.setCreatedAt(new Date());
-//        Optional<Post> postOptional= postRepository.findById(comment.getPost().getId());
-//        comments.setPost(postOptional.get());
-//        comments.setContent(comment.getContent());
         return commentRepository.save(comment);
     }
 
