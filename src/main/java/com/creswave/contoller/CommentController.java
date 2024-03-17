@@ -42,7 +42,6 @@ public class CommentController {
             if (existingComment.isPresent()) {
                 return ResponseEntity.status(HttpStatus.CONFLICT).body("Comment with the same content already exists.");
             }
-
             // Get the authenticated user's username
             String username = authentication.getName();
 
@@ -92,9 +91,7 @@ public class CommentController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body("Post with ID " + commentRequest.getPostId() + " does not exist.");
         }
-
         // Optionally, you can validate other attributes of the commentRequest
-
         // Set the associated post for the existing comment
         existingComment.setPost(optionalPost.get());
         existingComment.setUpdatedAt(new Date());
@@ -122,7 +119,6 @@ public class CommentController {
             if (!commentService.existsById(id)) {
                 return ResponseEntity.notFound().build();
             }
-
             commentService.deleteById(id);
             return ResponseEntity.ok("Comment deleted successfully");
         } catch (Exception e) {

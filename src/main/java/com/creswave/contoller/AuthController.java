@@ -34,7 +34,7 @@ public class AuthController {
     private final AuthenticationManager authenticationManager;
     private final UserService userService;
     private final RoleService roleService;
-//    private final CardService cardService;
+
     private final PasswordEncoder encoder;
     private final JwtService jwtService;
 
@@ -42,14 +42,13 @@ public class AuthController {
     public AuthController(AuthenticationManager authenticationManager,
                           UserService userService,
                           RoleService roleService,
-//                          CardService cardService,
+
                           PasswordEncoder encoder,
                           JwtService jwtService
                           ) {
         this.authenticationManager = authenticationManager;
         this.userService = userService;
         this.roleService = roleService;
-//        this.cardService = cardService;
         this.encoder = encoder;
         this.jwtService = jwtService;
     }

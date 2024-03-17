@@ -91,7 +91,4 @@ public class JwtService {
 	}
 
 }
-//https://www.youtube.com/watch?v=KxqlJblhzfI
-//https://medium.com/@mithunkhatri_76285/jwts-and-java-8e50ba041475
-//https://itecnote.com/tecnote/spring-jwt-signature-does-not-match-locally-computed-signature-jwt-validity-cannot-be-asserted-and-should-not-be-trusted/
-//https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx
+

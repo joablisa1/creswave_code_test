@@ -18,7 +18,7 @@ Any of this will work just fine
 for swagger users copy and paste this to your browser: http://localhost:8080/swagger-ui/index.html
 
 
-
+Two default users initialized in the system
 Admin
 username:admin
 password:1234
@@ -28,13 +28,12 @@ username:user
 password:1234
 
 
-
-
-
 								NOTES
 							.............
-1.No Post and comment created but you can create one or two  post and comment for testing.
-2.Generate an access Token for you to authorize  the user to work on the system.
+1.No Post and comment created, but you can create one or two  post and comment for testing.
+2.Database Tables will be generated automatically.
+2.Generate an access Token for you to authorize  the user to work on the API.on Swagger or postman
+3.Run mvn install the maven command to install the dependency if not installed.
 
 
 

@@ -32,6 +32,5 @@ public class Post {
     @JoinColumn(name = "author_id", nullable = false)
     private User author;
 
-//    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
-//    private List<Comment> comments = new ArrayList<>();
+
 }
